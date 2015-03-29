@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.my.dhreelife"
+    android:versionCode="2"
+    android:versionName="1.01" >
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="17" />
+
+    <permission
+        android:name="com.my.dhreelife.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <!-- for on boot start service or activity -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="com.my.dhreelife.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.my.dhreelife.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- Network State Permissions to detect Internet status -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.my.dhreelife.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" >
+    </uses-permission>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_v2"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBHxjR1geHG8UWHNJmHXah98eKzKPw-76k" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.my.dhreelife.root.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.root.WelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:mimeType="vnd.android.cursor.dir/vnd.exina.android.calendar.date" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.ContactDetailsActivity"
+            android:label="@string/title_activity_contact_details"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.CalendarEntryDetails"
+            android:label="@string/title_activity_contact_details"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.GroupDetailsActivity"
+            android:label="@string/title_activity_contact_details"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.root.PendingEventDetailsActivity"
+            android:label="@string/title_activity_pending_event_details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.AddNewContactActivity"
+            android:icon="@drawable/contact1"
+            android:label="@string/title_activity_add_new_contact"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.AddNewGroupActivity"
+            android:icon="@drawable/group1"
+            android:label="@string/title_activity_add_new_group"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.AddNewEventActivity"
+            android:label="@string/title_activity_add_new_event"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForActivity"
+            android:windowSoftInputMode="stateVisible|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.TagFriendActivity"
+            android:label="@string/title_activity_add_new_event"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.TagGroupActivity"
+            android:label="@string/title_activity_add_new_event"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.LocatorActivity"
+            android:label="@string/locator_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.AttendeesInfo"
+            android:label="@string/attendees_info"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.ProfileActivity"
+            android:label="@string/profile_activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.EditPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.activity.ReminderConfigurationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.root.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.root.RecoverPasswordActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/title_facebook_login"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.my.dhreelife.fragment.PickerActivity"
+            android:label="@string/app_name" />
+
+        <service android:name="com.my.dhreelife.KeepAliveService" />
+
+        <receiver
+            android:name="com.my.dhreelife.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <!-- Start up on boot -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                
+                <category android:name="com.my.dhreelife" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.my.dhreelife.GcmIntentService" />
+
+        <activity
+            android:name="com.my.dhreelife.activity.SponsorDetailsActivity"
+            android:label="@string/title_activity_sponsor_details"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForActivity" >
+        </activity>
+
+        <service
+            android:name="com.my.dhreelife.KeepAliveService"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/service_name" >
+        </service>
+    </application>
+
+</manifest>

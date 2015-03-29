@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventConfirmationActivity" >
+
+    <LinearLayout
+        android:id="@+id/even_confirmation_top_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alphabetheader"
+        android:weightSum="100" >
+
+        <Button
+            android:id="@+id/Button01"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="20"
+            android:background="@drawable/edit"
+            android:enabled="false"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/event_confirmation_title"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="60"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Event Confirmation"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black" />
+
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="20"
+            android:background="@drawable/edit"
+            android:enabled="false"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/event_confirmation_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/even_confirmation_top_panel"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:weightSum="90" >
+
+        <Button
+            android:id="@+id/going_to_event"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:background="@drawable/going_part2_button"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/btnAttendeeInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:background="@drawable/attendee_info_button" />
+
+        <Button
+            android:id="@+id/not_going_to_event"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:background="@drawable/not_going_part2_button"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/event_confirmation_panel"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <ProgressBar
+            android:id="@+id/chatWindowPb"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/chat_list_view"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:divider="@null"
+                android:dividerHeight="5dp"
+                android:paddingTop="5dp"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <EditText
+                android:id="@+id/chat_content_to_send"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="75"
+                android:maxLines="90"
+                android:singleLine="false" />
+
+            <Button
+                android:id="@+id/chat_send"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:background="@drawable/send_button" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

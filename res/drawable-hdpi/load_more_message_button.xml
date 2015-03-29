@@ -1,0 +1,11 @@
+<selector
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:state_pressed="true"
+            android:drawable="@drawable/load_earlier_message2" /> <!-- pressed -->
+    <item
+            android:state_focused="true"
+            android:drawable="@drawable/load_earlier_message1" /> <!-- focused -->
+    <item
+            android:drawable="@drawable/load_earlier_message1" /> <!-- default -->
+</selector>

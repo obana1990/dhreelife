@@ -1,0 +1,11 @@
+<selector
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:state_pressed="true"
+            android:drawable="@drawable/change_profile_photo_2" /> <!-- pressed -->
+    <item
+            android:state_focused="true"
+            android:drawable="@drawable/change_profile_photo_2" /> <!-- focused -->
+    <item
+            android:drawable="@drawable/change_profile_photo_1" /> <!-- default -->
+</selector>

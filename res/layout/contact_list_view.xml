@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/contactclickable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_launcher" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical" >
+
+        </TextView>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/customdivider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp" />
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DhreeLife</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_settings">Setting</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tab_contact">Contact</string>
+    <string name="tab_event">Event</string>
+    <string name="tab_notification">Notification</string>
+    <string name="tab_calendar">Calendar</string>
+    <string name="tab_setting">Setting</string>
+    <string name="title_activity_contact">Contact</string>
+    <string name="title_activity_event">Event</string>
+    <string name="title_activity_notification">Notification</string>
+    <string name="title_activity_calendar">Calendar</string>
+    <string name="title_activity_setting">Setting</string>
+    <string name="title_activity_contact_details">Contact Details</string>
+    <string name="title_activity_event_details">Event Details</string>
+    <string name="title_activity_get_location">CurrentLocation</string>
+    <string name="search">Search</string>
+    <string name="title_activity_pending_event_details">Pending Event Details</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_event_confirmation">Event Confirmation</string>
+    <string name="title_activity_post_event">Post Event</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_test_map">MainActivity</string>
+    <string name="title_activity_add_new_contact">Add New Contact</string>
+    <string name="title_activity_new_request">New Request</string>
+    <string name="title_activity_add_new_event">Add New Event</string>
+    <string name="title_activity_rating">Rating</string>
+    <string name="title_activity_share_event">Share Event</string>
+    <string name="title_activity_upload_photo">Upload Photo</string>
+    <string name="title_activity_check_in_event">Check In Event</string>
+    <string name="title_activity_add_new_group">Add New Group</string>
+    <string name="title_activity_event_extra_information">Event Extra Information</string>
+    <string name="title_activity_register">Register Activity</string>
+    <string name="facebook_app_id">1422531697995738</string>
+    <string name="locator_activity">Locator Activity</string>
+    <string name="profile_activity">Profile Activity</string>
+    <string name="attendees_info">Attendees Info</string>
+    <string name="title_facebook_login">Facebook Login</string>
+    <string name="action_location">Where are you?</string>
+    <string name="action_location_default">Select one</string>
+    <string name="action_people">With whom?</string>
+    <string name="action_people_default">Select friends</string>
+    <string name="share_option_prompt">Share Option</string>
+    <string name="service_name">Keep Alive Service</string>
+
+    <string-array name="share_option">
+        <item>Everyone</item>
+        <item>Custom List</item>
+    </string-array>
+    <string-array name="event_date">
+        <item>Date</item>
+    </string-array>
+    <string-array name="event_time">
+        <item>Time</item>
+    </string-array>
+    <string-array name="tag_friend">
+        <item>Tag Friend</item>
+    </string-array>
+    <string-array name="tag_group">
+        <item>Tag Group</item>
+    </string-array>
+    <string-array name="reminder_duration">
+        <item>15 minutes before event</item>
+        <item>30 minutes before event</item>
+        <item>45 minutes before event</item>
+        <item>1 hour before event</item>
+        <item>2 hours before event</item>
+    </string-array>
+    <string-array name="security_question">
+        <item>What is your mother maiden name?</item>
+        <item>Where were you born?</item>
+        <item>What is your first pet name?</item>
+        <item>What is your favourite color?</item>
+        <item>What is your father name?</item>
+        <item>What is your favourite food?</item>
+        <item>What is your secondary school name?</item>
+        <item>In what city or town was your first job?</item>
+        <item>In what city or town did your mother and father meet? </item>
+        <item>What is the first name of the boy or girl that you first kissed?</item>
+    </string-array>
+
+    <string name="title_activity_sponsor_details">SponsorDetailsActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+
+</resources>

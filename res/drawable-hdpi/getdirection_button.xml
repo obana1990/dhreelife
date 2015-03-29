@@ -1,0 +1,11 @@
+<selector
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:state_pressed="true"
+            android:drawable="@drawable/get_direction1" /> <!-- pressed -->
+    <item
+            android:state_focused="true"
+            android:drawable="@drawable/get_direction1" /> <!-- focused -->
+    <item
+            android:drawable="@drawable/get_direction2" /> <!-- default -->
+</selector>

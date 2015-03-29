@@ -1,0 +1,11 @@
+<selector
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:state_pressed="true"
+            android:drawable="@drawable/delete_selected_member2" /> <!-- pressed -->
+    <item
+            android:state_focused="true"
+            android:drawable="@drawable/delete_selected_member2" /> <!-- focused -->
+    <item
+            android:drawable="@drawable/delete_selected_member1" /> <!-- default -->
+</selector>

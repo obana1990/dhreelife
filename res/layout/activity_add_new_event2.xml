@@ -1,0 +1,203 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="110" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@drawable/header" >
+
+        <Button
+            android:id="@+id/createEventBackButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="20"
+            android:background="@drawable/back_button" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="60"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Create Event"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/create_event"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="20"
+            android:background="@drawable/createeventbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progressForm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/contactLoadingPb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp" />
+
+        <TextView
+            android:id="@+id/contactLoadingTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Submitting.."
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/createEventForm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <EditText
+            android:id="@+id/event_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="10"
+            android:ems="10"
+            android:imeOptions="actionNext"  
+            android:singleLine= "true" 
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="&lt;Event&apos;s Title>"
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/event_description"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="10"
+            android:ems="10"
+            android:imeOptions="actionNext"  
+            android:singleLine= "true" 
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="&lt;Description>"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/event_max_attendees"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="10"
+            android:digits="0123456789"
+            android:ems="10"
+            android:imeOptions="actionNext"  
+            android:singleLine= "true" 
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="&lt;Max Attendees>"
+            android:inputType="phone"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/event_location"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="10"
+            android:imeOptions="actionDone"  
+            android:singleLine= "true" 
+            android:ems="10"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="&lt;Location>"
+            android:maxLines="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10" >
+
+            <Spinner
+                android:id="@+id/spnrChangeDate"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="50"
+                android:entries="@array/event_date" />
+
+            <Spinner
+                android:id="@+id/spnrChangeTime"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="15dp"
+                android:layout_weight="50"
+                android:entries="@array/event_time" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TextView02"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="10"
+            android:text="Invite Member"
+            android:textColor="@color/brown" />
+
+        <Spinner
+            android:id="@+id/spnrTagFriend"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="10"
+            android:entries="@array/tag_friend" />
+
+        <Spinner
+            android:id="@+id/tagGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="10"
+            android:entries="@array/tag_group" />
+
+        <CheckBox
+            android:id="@+id/chkBoxEventPrivacy"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="10"
+            android:text="Allow friends to invite."
+            android:textColor="@color/gray" />
+    </LinearLayout>
+
+</LinearLayout>
